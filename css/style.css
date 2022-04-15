@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Configurações gerais
+/* 2. Menu
+/* 3. Banner
+/* 4. Destaques
+/* 5. Rodapé
+/* 6. Media
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root{
+	--ff-primary: "Rubik", Helvetica, Arial, sans-serif;
+
+	--clr-black: #121212;
+    --clr-dark: #292929;
+	--clr-blue: #6200EE;
+	--clr-pink: #BB86FC;
+	--clr-white: #F8F8F8;
+}
+
+/**********************************/
+/* 1. Configurações gerais
+/**********************************/
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 auto;
+    width: 1200px;
+	background-color: var(--clr-dark);
+	color: var(--clr-white);
+	font-family: var(--ff-primary);
+}
+a,
+a:hover,
+a:active,
+a:link,
+a:visited{
+	text-decoration: none;
+	color: var(--clr-white);
+}
+
+li{
+	text-decoration: none;
+	color: transparent;
+}
+button{
+    width: 180px;
+    text-decoration: none;
+	border-style: none;
+    background-color: var(--clr-pink);
+    color: var(--clr-white);
+}
+
+/**********************************/
+/* 2. Menu
+/**********************************/
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 960px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	padding: 40px 0;
+}
+.nav_list{
+    display: flex;
+	flex-wrap: wrap;
+}
+.nav_list a{
+    padding: 20px 10px;
+}
+/**********************************/
+/* 3. Banner
+/**********************************/
+
+
+/**********************************/
+/* 4. Destaques
+/**********************************/
+.grid{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1200px;
+    text-align: center;
+}
+.grid img{
+    width: 180px;
+    height: 180px;
+}
+.xp{
+    grid-column: 1;
+    grid-row: 1/4;
+}
+.xp img{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+.shirt{
+    display: grid;
+    margin: 0 0 50px 50px;
+
+
+}
+/**********************************/
+/* 5. Rodapé
+/**********************************/
+footer{
+	text-align: center;
+	background-color: var(--clr-black);
+}
+footer div{
+    padding: 10px;
+}
+
+/**********************************/
+/* 6. Media
+/**********************************/
