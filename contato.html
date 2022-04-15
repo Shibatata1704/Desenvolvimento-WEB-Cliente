@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Contato | TI Shirts</title>
 </head>
+
 <body>
     <header>
 
@@ -33,10 +35,76 @@
         </nav>
     </header>
 
+    <main>
+        <section>
+            <h1>Endereço</h1>
+            <p>
+                <a href="google.com/maps" target="_blank">
+                    Endereço: <span>Rua Tchurusbango Tchurusbago, 404 - Ponta Grossa, PR</span>
+                </a>
+                <br />
+                <a href="tel:+5542999999999" target="_blank">
+                    Telefone: <span>(42) 99999-9999</span>
+                </a>
+                <br />
+                <a href="https://api.whatsapp.com/send?phone=5542999999999">
+                    Whatsapp: <span>(42) 99999-9999</span>
+                </a>
+                <br />
+                <a href="mailto:contato@tishirts.com.br">
+                    E-mail: <span>contato@tishirts.com.br</span>
+                </a>
+            </p>
+        </section>
+        <section>
+            <form method="POST">
+                <div>
+                    <div>
+                        <h1>Contate-nos</h1>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Contato
+                            </legend>
+                            <div>
+                                <label for="name">Nome</label>
+                                <input name="name" type="text" placeholder="Fulano de tal">
+                            </div>
+                            <div>
+                                <label for="email">E-mail</label>
+                                <input name="email" type="email" placeholder="exemplo@exemplo.com.br">
+                            </div>
+                            <div>
+                                <label for="topic">Assunto:</label>
+                                <select name="topic">
+                                    <option value="1">Sugestões</option>
+                                    <option value="2">Elogios</option>
+                                    <option value="3">Reclamação</option>
+                                    <option value="0">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message">Mensagem:</label>
+                                <textarea name="message" rows="4" cols="50" placeholder="Sua Mensagem">
+                                </textarea>
+                            </div>
+                        </fieldset>
+                        <div>
+                            <button type="submit">
+                                <span>Enviar contato</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
     <footer>
         <hr>
         <div>
-            <section >
+            <section>
                 <a href="#">Facebook</a>
                 <a href="#">Twitter</a>
                 <a href="#">Instagram</a>
@@ -76,4 +144,5 @@
         </div>
     </footer>
 </body>
+
 </html>
