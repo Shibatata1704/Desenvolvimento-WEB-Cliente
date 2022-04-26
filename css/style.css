@@ -14,6 +14,7 @@
 /* 5. Rodapé
 /* 6. Media
 /* 8. Formulário Contato
+/* 9. Helpers
 
 
 /**********************************/
@@ -28,6 +29,7 @@
 	--clr-blue: #6200EE;
 	--clr-pink: #BB86FC;
 	--clr-white: #F8F8F8;
+	--clr-medium: #999999;
 }
 
 /**********************************/
@@ -67,6 +69,18 @@ button{
     color: var(--clr-white);
 }
 
+.btn-primary {
+    background-color: var(--clr-pink);
+    color: var(--clr-white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    border: none;
+}
+
 /**********************************/
 /* 2. Menu
 /**********************************/
@@ -84,7 +98,7 @@ nav{
     display: flex;
 	flex-wrap: wrap;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 502px) {
 	nav{
 		display: flex;
 		align-items: center;
@@ -151,6 +165,14 @@ footer div{
     padding: 10px;
 }
 
+.footer-links {
+    padding-inline-start: 0px;
+}
+
+.social {
+    margin: 0 5px;
+}
+
 /**********************************/
 /* 6. Media
 /**********************************/
@@ -194,4 +216,19 @@ form button{
 
 form{
 	font-size: clamp(0.3rem,1rem,1rem);
+}
+
+.card {
+    background-color: var(--clr-medium);
+}
+
+/**********************************/
+/* 9. Helpers
+/**********************************/
+
+.p10 {
+    padding: 10px;
+}
+.p0 {
+    padding: 0 !important;
 }

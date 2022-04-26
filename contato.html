@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Contato | TI Shirts</title>
 </head>
 
@@ -15,7 +15,7 @@
         <!--  Menu  -->
 
         <nav>
-            <a href="index.html"><img src="/assets/Logo TI-Shirts.png" alt="" srcset=""></a>
+            <a href="index.html"><img src="assets/Logo TI-Shirts.png" alt="" srcset=""></a>
             <div>
                 <ul class="nav_list">
                     <li>
@@ -69,15 +69,15 @@
                             </legend>
                             <div>
                                 <label for="name">Nome:</label>
-                                <input name="name" type="text" placeholder="Fulano de tal">
+                                <input id="name" name="name" type="text" placeholder="Fulano de tal">
                             </div>
                             <div>
                                 <label for="email">E-mail:</label>
-                                <input name="email" type="email" placeholder="exemplo@exemplo.com.br">
+                                <input id="email" name="email" type="email" placeholder="exemplo@exemplo.com.br">
                             </div>
                             <div>
                                 <label for="topic">Assunto:</label>
-                                <select name="topic">
+                                <select id="topic" name="topic">
                                     <option value="1">Sugestões</option>
                                     <option value="2">Elogios</option>
                                     <option value="3">Reclamação</option>
@@ -86,12 +86,12 @@
                             </div>
                             <div class="message-box">
                                 <label for="message">Mensagem:</label>
-                                <textarea name="message" rows="4" cols="25" placeholder="Sua Mensagem">
+                                <textarea id="message" name="message" rows="4" cols="25" placeholder="Sua Mensagem">
                                 </textarea>
                             </div>
                         </fieldset>
                     </div>
-                    <div class="submit-button-wrapper"> 
+                    <div class="submit-button-wrapper">
                         <button id="submit-button" type="submit">
                             <span>Enviar contato</span>
                         </button>
@@ -105,22 +105,33 @@
         <hr>
         <div>
             <section>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </section>
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-                    eum harum corrupti dicta, aliquam sequi voluptate quas.
-                </p>
+                <a class="social" href="#">
+                    <i class="bi bi-facebook"></i>
+                    Facebook
+                </a>
+                <a class="social" href="#">
+                    <i class="bi bi-twitter"></i>
+                    Twitter
+                </a>
+                <a class="social" href="#">
+                    <i class="bi bi-instagram"></i>
+                    Instagram
+                </a>
             </section>
             <section>
                 <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                        eum harum corrupti dicta, aliquam sequi voluptate quas.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class="p0">
                     <div>
                         <h5>Links</h5>
-                        <ul>
+                        <ul class="footer-links">
                             <li>
                                 <a href="index.html">Início</a>
                             </li>

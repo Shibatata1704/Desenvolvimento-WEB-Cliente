@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Cadastro | TI Shirts</title>
 </head>
 
@@ -15,7 +17,7 @@
         <!--  Menu  -->
 
         <nav>
-            <a href="index.html"><img src="/assets/Logo TI-Shirts.png" alt="" srcset=""></a>
+            <a href="index.html"><img src="assets/Logo TI-Shirts.png" alt="" srcset=""></a>
             <div>
                 <ul class="nav_list">
                     <li>
@@ -37,85 +39,94 @@
 
     <main>
         <section>
-            <h1>Endereço</h1>
-            <p>
-                <a href="google.com/maps" target="_blank">
-                    Endereço: <span>Rua Tchurusbango Tchurusbago, 404 - Ponta Grossa, PR</span>
-                </a>
-                <br />
-                <a href="tel:+5542999999999" target="_blank">
-                    Telefone: <span>(42) 99999-9999</span>
-                </a>
-                <br />
-                <a href="https://api.whatsapp.com/send?phone=5542999999999">
-                    Whatsapp: <span>(42) 99999-9999</span>
-                </a>
-                <br />
-                <a href="mailto:contato@tishirts.com.br">
-                    E-mail: <span>contato@tishirts.com.br</span>
-                </a>
-            </p>
-        </section>
-        <section>
-            <form method="POST">
-                <div>
-                    <div>
-                        <h1>Cadastre-se</h1>
-                    </div>
-                    <div>
-                        <fieldset>
-                            <legend>
-                                Cadastro
-                            </legend>
-                            <div>
-                                <label for="name">Nome
-                                    <input name="name" type="text" placeholder="Fulano de tal">
-                                </label>
+            <div class="row">
+                <div class="col-12">
+                    <h1>Cadastre-se</h1>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi voluptate quas.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card p10">
+                        <form method="POST">
+                            <div class="row">
+                                <div class=" col-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h2>
+                                                Cadastro
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="name">Nome</label>
+                                                <input class="form-control" id="name" name="name" type="text" placeholder="Fulano de tal">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="email">E-mail</label>
+                                                <input class="form-control" id="email" name="email" type="email" placeholder="exemplo@exemplo.com.br">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="cpf">CPF</label>
+                                                <input class="form-control" id="cpf" name="cpf" type="text" placeholder="000.000.000-00">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="cep">CEP</label>
+                                                <input class="form-control" id="cep" name="cep" type="number" placeholder="00000-000">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="street">Rua</label>
+                                                <input class="form-control" id="street" name="street" type="text" placeholder="Rua A">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="city">Cidade</label>
+                                                <input class="form-control" id="city" name="city" type="text" placeholder="Cidade C">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="district">Bairro</label>
+                                                <input class="form-control" id="district" name="district" type="text" placeholder="Bairro B">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="number">Número</label>
+                                                <input class="form-control" id="number" name="number" type="number" placeholder="105">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <label for="email">E-mail
-                                    <input name="email" type="email" placeholder="exemplo@exemplo.com.br">
-                                </label>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-primary">
+                                            <span>Enviar cadastro</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <label for="cep">CEP
-                                    <input name="cep" type="number" placeholder="00000-000">
-                                </label>
-                            </div>
-                            <div>
-                                <label for="street">Rua
-                                    <input name="street" type="text" placeholder="Rua A">
-                                </label>
-                            </div>
-                            <div>
-                                <label for="district">Bairro
-                                    <input name="district" type="text" placeholder="Bairro B">
-                                </label>
-                            </div>
-                            <div>
-                                <label for="city">Cidade
-                                    <input name="city" type="text" placeholder="Cidade C">
-                                </label>
-                            </div>
-                            <div>
-                                <label for="number">Número
-                                    <input name="number" type="number" placeholder="105">
-                                </label>
-                            </div>
-                            <div>
-                                <label for="cpf">CPF
-                                    <input name="cpf" type="text" placeholder="000.000.000-00">
-                                </label>
-                            </div>
-                        </fieldset>
-                        <div>
-                            <button type="submit">
-                                <span>Enviar cadastro</span>
-                            </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+            </div>
         </section>
     </main>
 
@@ -123,22 +134,33 @@
         <hr>
         <div>
             <section>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </section>
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-                    eum harum corrupti dicta, aliquam sequi voluptate quas.
-                </p>
+                <a class="social" href="#">
+                    <i class="bi bi-facebook"></i>
+                    Facebook
+                </a>
+                <a class="social" href="#">
+                    <i class="bi bi-twitter"></i>
+                    Twitter
+                </a>
+                <a class="social" href="#">
+                    <i class="bi bi-instagram"></i>
+                    Instagram
+                </a>
             </section>
             <section>
                 <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                        eum harum corrupti dicta, aliquam sequi voluptate quas.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class="p0">
                     <div>
                         <h5>Links</h5>
-                        <ul>
+                        <ul class="footer-links">
                             <li>
                                 <a href="index.html">Início</a>
                             </li>
