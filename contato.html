@@ -62,17 +62,17 @@
                     <div>
                         <h1>Contate-nos</h1>
                     </div>
-                    <div>
+                    <div class="form-wrapper">
                         <fieldset>
                             <legend>
                                 Contato
                             </legend>
                             <div>
-                                <label for="name">Nome</label>
+                                <label for="name">Nome:</label>
                                 <input name="name" type="text" placeholder="Fulano de tal">
                             </div>
                             <div>
-                                <label for="email">E-mail</label>
+                                <label for="email">E-mail:</label>
                                 <input name="email" type="email" placeholder="exemplo@exemplo.com.br">
                             </div>
                             <div>
@@ -84,17 +84,17 @@
                                     <option value="0">Outro</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="message-box">
                                 <label for="message">Mensagem:</label>
-                                <textarea name="message" rows="4" cols="50" placeholder="Sua Mensagem">
+                                <textarea name="message" rows="4" cols="25" placeholder="Sua Mensagem">
                                 </textarea>
                             </div>
                         </fieldset>
-                        <div>
-                            <button type="submit">
-                                <span>Enviar contato</span>
-                            </button>
-                        </div>
+                    </div>
+                    <div class="submit-button-wrapper"> 
+                        <button id="submit-button" type="submit">
+                            <span>Enviar contato</span>
+                        </button>
                     </div>
                 </div>
             </form>

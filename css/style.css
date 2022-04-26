@@ -13,6 +13,8 @@
 /* 4. Destaques
 /* 5. Rodapé
 /* 6. Media
+/* 8. Formulário Contato
+
 
 /**********************************/
 /* 0. Variáveis
@@ -37,7 +39,9 @@ html{
 
 body{
     margin: 0 auto;
-    width: 1200px;
+	min-width: 20rem;
+	overflow: auto;
+    /* width: 75rem; */
 	background-color: var(--clr-dark);
 	color: var(--clr-white);
 	font-family: var(--ff-primary);
@@ -80,8 +84,26 @@ nav{
     display: flex;
 	flex-wrap: wrap;
 }
+@media screen and (max-width: 460px) {
+	nav{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 960px;
+		margin: 0 auto;
+		flex-flow: column wrap;
+	}
+	.nav_list {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		flex-wrap: wrap;
+		font-size: 0.8rem;
+		padding: 0;
+	}
+  }
 .nav_list a{
-    padding: 20px 10px;
+    padding: 1.2rem 0.6rem;
 }
 /**********************************/
 /* 3. Banner
@@ -93,9 +115,10 @@ nav{
 /**********************************/
 .grid{
     margin: 0 auto;
+	overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: 1200px;
+    max-width: 75rem;
     text-align: center;
 }
 .grid img{
@@ -131,3 +154,44 @@ footer div{
 /**********************************/
 /* 6. Media
 /**********************************/
+/**********************************/
+/* 7. Main
+/**********************************/
+main{
+	max-width: 960px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+/**********************************/
+/* 8. Formulário Contato
+/**********************************/
+
+.form-wrapper{
+	width: 100%;
+	display: flex;
+	flex-wrap:  wrap;
+	justify-content: center;
+}
+.form-wrapper fieldset{
+	width: fit-content;
+	border-color: var(--clr-pink);
+}
+
+.submit-button-wrapper{
+	display: flex;
+	justify-content: center;
+}
+.message-box{
+	display: flex;
+	flex-direction: column;
+}
+
+form button{
+	padding: 0.5rem;
+	margin: 0.5rem 0rem;
+	border-radius: 1rem;
+}
+
+form{
+	font-size: clamp(0.3rem,1rem,1rem);
+}
