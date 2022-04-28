@@ -261,3 +261,9 @@ form{
     object-fit: cover;
     object-position: 0 10px;
 }
+/**********************************/
+/* 10. Carrihno
+/**********************************/
+.finish{
+	text-align: right;
+}
