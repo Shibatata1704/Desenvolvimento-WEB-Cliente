@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /**********************************/
@@ -21,52 +22,54 @@
 /* 0. Variáveis
 /**********************************/
 
-:root{
-	--ff-primary: "Rubik", Helvetica, Arial, sans-serif;
+:root {
+    --ff-primary: "Rubik", Helvetica, Arial, sans-serif;
 
-	--clr-black: #121212;
+    --clr-black: #121212;
     --clr-dark: #292929;
-	--clr-blue: #6200EE;
-	--clr-pink: #BB86FC;
-	--clr-white: #F8F8F8;
-	--clr-medium: #999999;
+    --clr-blue: #6200EE;
+    --clr-pink: #BB86FC;
+    --clr-white: #F8F8F8;
+    --clr-medium: #999999;
 }
 
 /**********************************/
 /* 1. Configurações gerais
 /**********************************/
-html{
-	scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
     max-width: 1200px;
     margin: auto;
 }
 
-body{
+body {
     margin: 0 auto;
-	min-width: 20rem;
-	overflow: auto;
+    min-width: 20rem;
+    overflow: auto;
     /* width: 75rem; */
-	background-color: var(--clr-dark);
-	color: var(--clr-white);
-	font-family: var(--ff-primary);
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    font-family: var(--ff-primary);
 }
+
 a,
 a:hover,
 a:active,
 a:link,
-a:visited{
-	text-decoration: none;
-	color: var(--clr-white);
+a:visited {
+    text-decoration: none;
+    color: var(--clr-white);
 }
 
-li{
-	text-decoration: none;
-	color: transparent;
+li {
+    text-decoration: none;
+    color: transparent;
 }
-button{
+
+button {
     width: 180px;
     text-decoration: none;
-	border-style: none;
+    border-style: none;
     background-color: var(--clr-pink);
     color: var(--clr-white);
 }
@@ -87,38 +90,48 @@ button{
 /* 2. Menu
 /**********************************/
 
-nav{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 960px;
-	margin: 0 auto;
-	flex-wrap: wrap;
-	padding: 40px 0;
-}
-.nav_list{
+nav {
     display: flex;
-	flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 40px 0;
 }
-@media screen and (max-width: 502px) {
-	nav{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 960px;
-		margin: 0 auto;
-		flex-flow: column wrap;
-	}
-	.nav_list {
-		display: flex;
-		justify-content: center;
-		margin: 0 auto;
-		flex-wrap: wrap;
-		font-size: 0.8rem;
-		padding: 0;
-	}
-  }
-.nav_list a{
+
+.nav_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 597px) {
+    header {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 636px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 960px;
+        margin: 0 auto;
+        flex-flow: column wrap;
+    }
+
+    .nav_list {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        padding: 0;
+    }
+}
+
+.nav_list a {
     padding: 1.2rem 0.6rem;
 }
 
@@ -133,14 +146,37 @@ nav{
         display: flex;
         justify-content: center;
     }
+
     .product-desc {
         display: flex;
         justify-content: center;
     }
+
     #produtos {
         padding: 0 50px;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    main {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .hide {
+        display: none;
+    }
+    .destaques {
+        padding: 0 30px;
+        margin-top: 20px;
+    }
+
+    .mt-20 > .col-12 {
+        margin-top: 10px;
+    }
+}
+
 /**********************************/
 /* 3. Banner
 /**********************************/
@@ -149,41 +185,54 @@ nav{
 /**********************************/
 /* 4. Destaques
 /**********************************/
-.grid{
+.grid {
     margin: 0 auto;
-	overflow: hidden;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 75rem;
     text-align: center;
 }
-.grid img{
+
+.grid img {
     width: 180px;
     height: 180px;
 }
-.xp{
-    grid-column: 1;
-    grid-row: 1/4;
+
+.xp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.xp img{
+
+.xp img {
     width: 100%;
     height: 100%;
-    padding-bottom: 50px;
 }
-.shirt{
-    display: grid;
-    margin: 0 0 50px 50px;
 
-
+.shirt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+@media only screen and (min-width: 575px) {
+    .shirt > button {
+        width: 90%;
+    }
+}
+
 /**********************************/
 /* 5. Rodapé
 /**********************************/
-footer{
-	text-align: center;
-	background-color: var(--clr-black);
+footer {
+    text-align: center;
+    background-color: var(--clr-black);
 }
-footer div{
+
+footer div {
     padding: 10px;
 }
 
@@ -201,39 +250,41 @@ footer div{
 /**********************************/
 /* 7. Main
 /**********************************/
-main{
-	max-width: 960px;
-	margin: 0 auto;
-	flex-wrap: wrap;
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
+
 /**********************************/
 /* 8. Formulário Contato
 /**********************************/
 
-.form-wrapper{
-	width: 100%;
-	display: flex;
-	flex-wrap:  wrap;
-	justify-content: center;
-}
-.form-wrapper fieldset{
-	width: fit-content;
-	border: none;
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.submit-button-wrapper{
-	display: flex;
-	justify-content: center;
+.form-wrapper fieldset {
+    width: fit-content;
+    border: none;
 }
 
-form button{
-	padding: 0.5rem;
-	margin: 0.5rem 0rem;
-	border-radius: 1rem;
+.submit-button-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-form{
-	font-size: clamp(0.3rem,1rem,1rem);
+form button {
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    border-radius: 1rem;
+}
+
+form {
+    font-size: clamp(0.3rem, 1rem, 1rem);
 }
 
 .card {
@@ -247,14 +298,18 @@ form{
 .p10 {
     padding: 10px;
 }
+
 .p0 {
     padding: 0 !important;
 }
 .mt-10 {
     margin-top: 10px !important;
 }
+.mt-20 {
+    margin-top: 20px !important;
+}
 
-.img-fluid {
+.product-img>.img-fluid {
     width: 100%;
     max-width: 304px;
     max-height: 200px;
