@@ -50,6 +50,10 @@ body{
 	color: var(--clr-white);
 	font-family: var(--ff-primary);
 }
+#container{
+	margin: 0 auto;
+    max-width: 1200px;
+}
 a,
 a:hover,
 a:active,
