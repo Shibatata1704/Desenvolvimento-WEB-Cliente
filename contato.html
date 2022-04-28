@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Contato | TI Shirts</title>
 </head>
@@ -63,36 +65,36 @@
                         <h1>Contate-nos</h1>
                     </div>
                     <div class="form-wrapper">
-                        <fieldset>
+                        <fieldset class="card p10">
                             <legend>
                                 Contato
                             </legend>
-                            <div>
+                            <div class="form-group">
                                 <label for="name">Nome:</label>
-                                <input id="name" name="name" type="text" placeholder="Fulano de tal">
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Fulano de tal">
                             </div>
-                            <div>
+                            <div class="form-group">
                                 <label for="email">E-mail:</label>
-                                <input id="email" name="email" type="email" placeholder="exemplo@exemplo.com.br">
+                                <input class="form-control" id="email" name="email" type="email" placeholder="exemplo@exemplo.com.br">
                             </div>
-                            <div>
+                            <div class="form-group">
                                 <label for="topic">Assunto:</label>
-                                <select id="topic" name="topic">
+                                <select class="form-control" id="topic" name="topic">
                                     <option value="1">Sugestões</option>
                                     <option value="2">Elogios</option>
                                     <option value="3">Reclamação</option>
                                     <option value="0">Outro</option>
                                 </select>
                             </div>
-                            <div class="message-box">
+                            <div>
                                 <label for="message">Mensagem:</label>
-                                <textarea id="message" name="message" rows="4" cols="25" placeholder="Sua Mensagem">
+                                <textarea class="form-control" id="message" name="message" rows="4" cols="25" placeholder="Sua Mensagem">
                                 </textarea>
                             </div>
                         </fieldset>
                     </div>
                     <div class="submit-button-wrapper">
-                        <button id="submit-button" type="submit">
+                        <button id="submit-button"  class="btn btn-primary" type="submit">
                             <span>Enviar contato</span>
                         </button>
                     </div>

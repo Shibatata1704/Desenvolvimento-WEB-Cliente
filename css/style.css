@@ -218,16 +218,12 @@ main{
 }
 .form-wrapper fieldset{
 	width: fit-content;
-	border-color: var(--clr-pink);
+	border: none;
 }
 
 .submit-button-wrapper{
 	display: flex;
 	justify-content: center;
-}
-.message-box{
-	display: flex;
-	flex-direction: column;
 }
 
 form button{
