@@ -75,27 +75,31 @@
                             <legend>
                                 Contato
                             </legend>
-                            <div class="form-group">
-                                <label for="name">Nome:</label>
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Fulano de tal">
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="name">Nome:</label>
+                                    <input class="form-control" id="name" name="name" type="text" placeholder="Fulano de tal">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="email">E-mail:</label>
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="exemplo@exemplo.com.br">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="topic">Assunto:</label>
+                                    <select class="form-control" id="topic" name="topic">
+                                        <option value="1">Sugestões</option>
+                                        <option value="2">Elogios</option>
+                                        <option value="3">Reclamação</option>
+                                        <option value="0">Outro</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="email">E-mail:</label>
-                                <input class="form-control" id="email" name="email" type="email" placeholder="exemplo@exemplo.com.br">
-                            </div>
-                            <div class="form-group">
-                                <label for="topic">Assunto:</label>
-                                <select class="form-control" id="topic" name="topic">
-                                    <option value="1">Sugestões</option>
-                                    <option value="2">Elogios</option>
-                                    <option value="3">Reclamação</option>
-                                    <option value="0">Outro</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="message">Mensagem:</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" cols="25" placeholder="Sua Mensagem">
-                                </textarea>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="message">Mensagem:</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" cols="25" placeholder="Sua Mensagem">
+                                    </textarea>
+                                </div>
                             </div>
                         </fieldset>
                     </div>
