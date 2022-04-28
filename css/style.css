@@ -37,6 +37,8 @@
 /**********************************/
 html{
 	scroll-behavior: smooth;
+    max-width: 1200px;
+    margin: auto;
 }
 
 body{
@@ -118,6 +120,26 @@ nav{
   }
 .nav_list a{
     padding: 1.2rem 0.6rem;
+}
+
+@media only screen and (max-width: 960px) {
+    #produtos {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product-img {
+        display: flex;
+        justify-content: center;
+    }
+    .product-desc {
+        display: flex;
+        justify-content: center;
+    }
+    #produtos {
+        padding: 0 50px;
+    }
 }
 /**********************************/
 /* 3. Banner
@@ -231,4 +253,15 @@ form{
 }
 .p0 {
     padding: 0 !important;
+}
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.img-fluid {
+    width: 100%;
+    max-width: 304px;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: 0 10px;
 }
