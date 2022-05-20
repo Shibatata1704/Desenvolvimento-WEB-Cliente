@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="plugins/bootstrap.min.css">
     <link rel="stylesheet" href="plugins/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
     <title>Contato | TI Shirts</title>
 </head>
 
-<body>
+<body ng-app="app">
     <header>
 
         <!--  Menu  -->
@@ -65,7 +66,7 @@
             </p>
         </section>
         <section>
-            <form method="POST">
+            <form id="contact_form" ng-controller="ContactController">
                 <div>
                     <div>
                         <h1>Contate-nos</h1>
@@ -77,30 +78,33 @@
                             </legend>
                             <div class="form-group">
                                 <label for="name">Nome:</label>
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Fulano de tal">
+                                <input class="form-control" type="text" ng-model="data.name" placeholder="Fulano de tal">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail:</label>
-                                <input class="form-control" id="email" name="email" type="email" placeholder="exemplo@exemplo.com.br">
+                                <input class="form-control"
+                                type="text"
+                                type="email"
+                                ng-model="data.email" placeholder="exemplo@exemplo.com.br">
                             </div>
                             <div class="form-group">
                                 <label for="topic">Assunto:</label>
-                                <select class="form-control" id="topic" name="topic">
-                                    <option value="1">Sugestões</option>
-                                    <option value="2">Elogios</option>
-                                    <option value="3">Reclamação</option>
-                                    <option value="0">Outro</option>
+                                <select class="form-control" ng-model="data.subject">
+                                    <option value="Sugestões">Sugestões</option>
+                                    <option value="Elogios">Elogios</option>
+                                    <option value="Reclamação">Reclamação</option>
+                                    <option value="Outro">Outro</option>
                                 </select>
                             </div>
                             <div>
                                 <label for="message">Mensagem:</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" cols="25" placeholder="Sua Mensagem">
+                                <textarea class="form-control" ng-model="data.message" rows="4" cols="25" placeholder="Sua Mensagem">
                                 </textarea>
                             </div>
                         </fieldset>
                     </div>
                     <div class="submit-button-wrapper">
-                        <button id="submit-button"  class="btn btn-primary" type="submit">
+                        <button class="btn btn-primary" ng-click="contact()">
                             <span>Enviar contato</span>
                         </button>
                     </div>
@@ -168,6 +172,11 @@
             <a href="index.html">TI Shirts</a>
         </div>
     </footer>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/angular.min.js"></script>
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <script src="js/contato/script.js"></script>
 </body>
 
 </html>
