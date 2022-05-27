@@ -286,6 +286,10 @@ form button {
 .card {
     background-color: var(--clr-medium);
 }
+.card-inside {
+    border: rgba(0, 0, 0, 0.5) 2px solid;
+    border-radius: 10px;
+}
 
 /**********************************/
 /* 9. Helpers

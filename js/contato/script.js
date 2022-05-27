@@ -3,8 +3,6 @@ var app = angular.module('app', []);
 app.controller('ContactController', ['$scope', ($scope) => {
     var s = $scope;
 
-    s.loading = false;
-
     s.data = {
         name: null,
         email: null,
@@ -19,11 +17,6 @@ app.controller('ContactController', ['$scope', ($scope) => {
             subject: 'Sugestões',
             message: null
         };
-    }
-
-    s.status = {
-        error: null,
-        message: null
     }
 
     function validateEmail (email) {
