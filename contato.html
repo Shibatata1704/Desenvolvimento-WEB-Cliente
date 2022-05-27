@@ -78,18 +78,18 @@
                             </legend>
                             <div class="form-group">
                                 <label for="name">Nome:</label>
-                                <input class="form-control" type="text" ng-model="data.name" placeholder="Fulano de tal">
+                                <input class="form-control" id="name" type="text" ng-model="data.name" placeholder="Fulano de tal">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail:</label>
                                 <input class="form-control"
                                 type="text"
-                                type="email"
+                                id="email"
                                 ng-model="data.email" placeholder="exemplo@exemplo.com.br">
                             </div>
                             <div class="form-group">
                                 <label for="topic">Assunto:</label>
-                                <select class="form-control" ng-model="data.subject">
+                                <select class="form-control" id="topic" ng-model="data.subject">
                                     <option value="Sugestões">Sugestões</option>
                                     <option value="Elogios">Elogios</option>
                                     <option value="Reclamação">Reclamação</option>
@@ -98,7 +98,7 @@
                             </div>
                             <div>
                                 <label for="message">Mensagem:</label>
-                                <textarea class="form-control" ng-model="data.message" rows="4" cols="25" placeholder="Sua Mensagem">
+                                <textarea class="form-control" id="message" ng-model="data.message" rows="4" cols="25" placeholder="Sua Mensagem">
                                 </textarea>
                             </div>
                         </fieldset>
