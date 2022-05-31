@@ -66,6 +66,10 @@ li {
     color: transparent;
 }
 
+.hide {
+    display: none !important;
+}
+
 button {
     width: 180px;
     text-decoration: none;
@@ -164,7 +168,7 @@ nav {
 }
 
 @media only screen and (max-width: 575px) {
-    .hide {
+    .hide-sm {
         display: none;
     }
     .destaques {

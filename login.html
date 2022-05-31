@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login | TI Shirts</title>
+</head>
+
+<body ng-app="app">
+    <header>
+
+        <!--  Menu  -->
+
+        <nav>
+            <a href="index.html"><img src="assets/Logo TI-Shirts.png" alt="" srcset=""></a>
+            <div>
+                <ul class="nav_list">
+                    <li>
+                        <a href="index.html">Início</span></a>
+                    </li>
+                    <li>
+                        <a href="produtos.html">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                    <li>
+                        <a href="cadastro.html">Cadastro</a>
+                    </li>
+                    <li>
+                        <a href="carrinho.html">
+                            <i class="bi bi-cart-check"></i>
+                            Carrinho
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="row">
+                <div class="col-12" style="display: flex; justify-content: center; align-items: center">
+                    <h1>Logar</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="display: flex; justify-content: center; align-items: center">
+                    <div class="card p10" style="max-width: 30rem">
+                        <form ng-controller="LoginController">
+                            <div class="row">
+                                <div class=" col-12">
+                                    <div class="row">
+                                        <div class="col-12 mt-10">
+                                            <div class="form-group">
+                                                <label for="email">E-mail</label>
+                                                <input class="form-control" id="email" type="text" ng-model="data.email" placeholder="exemplo@exemplo.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-10">
+                                            <label for="pass">Senha</label>
+                                            <input type="password" class="form-control" id="pass" ng-model="data.password" placeholder="********">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-10">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button class="btn btn-primary" ng-click="login()">
+                                            <span>Entrar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <div>
+            <section>
+                <a class="social" href="#">
+                    <i class="bi bi-facebook"></i>
+                    Facebook
+                </a>
+                <a class="social" href="#">
+                    <i class="bi bi-twitter"></i>
+                    Twitter
+                </a>
+                <a class="social" href="#">
+                    <i class="bi bi-instagram"></i>
+                    Instagram
+                </a>
+            </section>
+            <section>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                        eum harum corrupti dicta, aliquam sequi voluptate quas.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class="p0">
+                    <div>
+                        <h5>Links</h5>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="index.html">Início</a>
+                            </li>
+                            <li>
+                                <a href="produtos.html">Produtos</a>
+                            </li>
+                            <li>
+                                <a href="contato.html">Contato</a>
+                            </li>
+                            <li>
+                                <a href="cadastro.html">Cadastro</a>
+                            </li>
+                            <li>
+                                <a href="carrinho.html">
+                                    <i class="bi bi-cart-check"></i>
+                                    Carrinho
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+        </div>
+
+        <div>
+            © 2022 Copyright:
+            <a href="index.html">TI Shirts</a>
+        </div>
+    </footer>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/angular.min.js"></script>
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <script src="js/login/script.js"></script>
+</body>
+
+</html>
