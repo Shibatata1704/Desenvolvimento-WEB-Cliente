@@ -64,7 +64,7 @@ app.controller('RegisterController', ['$scope', '$timeout','CepService',($scope,
             toastr.success('Usuário cadastrado com sucesso.');
         } catch (error) {
             console.error(error);
-            toastr.danger('Ocorreu um erro ao salvar as informações.');
+            toastr.error('Ocorreu um erro ao salvar as informações.');
         }
     }
 

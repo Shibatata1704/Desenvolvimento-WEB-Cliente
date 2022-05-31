@@ -29,13 +29,21 @@
                     <li>
                         <a href="contato.html">Contato</a>
                     </li>
-                    <li>
+                    <li id="cadastro">
                         <a href="cadastro.html">Cadastro</a>
                     </li>
                     <li>
                         <a href="carrinho.html">
                             <i class="bi bi-cart-check"></i>
                             Carrinho
+                        </a>
+                    </li>
+                    <li id="login">
+                        <a href="login.html">Entrar</a>
+                    </li>
+                    <li id="logout">
+                        <a onclick="logout()" href="#">
+                            Sair
                         </a>
                     </li>
                 </ul>
@@ -46,85 +54,85 @@
     <main>
         <!--  Banner  -->
 
-    <section class="banner hide">
-        <div class="row">
-            <div class="col-12">
-                <img src="assets/banner_site.png" class="img-fluid" alt="Banner T.I. Shirts">
+        <section class="banner hide-sm">
+            <div class="row">
+                <div class="col-12">
+                    <img src="assets/banner_site.png" class="img-fluid" alt="Banner T.I. Shirts">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--  Destaques  -->
+        <!--  Destaques  -->
 
-    <section class="destaques">
-        <div>
-            <h2>Destaques</h2>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-3 mt-20">
-                <div class="xp shirt">
-                    <img src="assets/CuboMagico.png" class="img-fluid" alt="Camiseta Cubo Mágico">
-                    <button class="btn btn-primary mt-10">
-                        COMPRAR
-                    </button>
+        <section class="destaques">
+            <div>
+                <h2>Destaques</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-3 mt-20">
+                    <div class="xp shirt">
+                        <img src="assets/CuboMagico.png" class="img-fluid" alt="Camiseta Cubo Mágico">
+                        <button class="btn btn-primary mt-10">
+                            COMPRAR
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-9">
+                    <div class="row mt-20">
+                        <div class="col-12 col-sm-4">
+                            <div class="shirt">
+                                <img src="assets/Off_Line_Fundo_Preto.png" class="img-fluid" alt="Camiseta Off_Line_Fundo_Preto">
+                                <button class="btn btn-primary mt-10">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="shirt">
+                                <img src="assets/Me_expresso_fundo_Preto.png" class="img-fluid" alt="Camiseta Me_expresso_fundo_Preto">
+                                <button class="btn btn-primary mt-10">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="shirt">
+                                <img src="assets/Quero_Cafe_fundo_Preto.png" class="img-fluid" alt="Camiseta Quero_Cafe_fundo_Preto">
+                                <button class="btn btn-primary mt-10">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-20">
+                        <div class="col-12 col-sm-4">
+                            <div class="shirt">
+                                <img src="assets/Off_Line_Fundo_Preto.png" class="img-fluid" alt="Camiseta Off_Line_Fundo_Preto">
+                                <button class="btn btn-primary mt-10">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="shirt">
+                                <img src="assets/Me_expresso_fundo_Preto.png" class="img-fluid" alt="Camiseta Me_expresso_fundo_Preto">
+                                <button class="btn btn-primary mt-10">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="shirt">
+                                <img src="assets/Quero_Cafe_fundo_Preto.png" class="img-fluid" alt="Camiseta Quero_Cafe_fundo_Preto">
+                                <button class="btn btn-primary mt-10">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-9">
-                <div class="row mt-20">
-                    <div class="col-12 col-sm-4">
-                        <div class="shirt">
-                            <img src="assets/Off_Line_Fundo_Preto.png" class="img-fluid" alt="Camiseta Off_Line_Fundo_Preto">
-                            <button class="btn btn-primary mt-10">
-                                COMPRAR
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4">
-                        <div class="shirt">
-                            <img src="assets/Me_expresso_fundo_Preto.png" class="img-fluid" alt="Camiseta Me_expresso_fundo_Preto">
-                            <button class="btn btn-primary mt-10">
-                                COMPRAR
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4">
-                        <div class="shirt">
-                            <img src="assets/Quero_Cafe_fundo_Preto.png" class="img-fluid" alt="Camiseta Quero_Cafe_fundo_Preto">
-                            <button class="btn btn-primary mt-10">
-                                COMPRAR
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-20">
-                    <div class="col-12 col-sm-4">
-                        <div class="shirt">
-                            <img src="assets/Off_Line_Fundo_Preto.png" class="img-fluid" alt="Camiseta Off_Line_Fundo_Preto">
-                            <button class="btn btn-primary mt-10">
-                                COMPRAR
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4">
-                        <div class="shirt">
-                            <img src="assets/Me_expresso_fundo_Preto.png" class="img-fluid" alt="Camiseta Me_expresso_fundo_Preto">
-                            <button class="btn btn-primary mt-10">
-                                COMPRAR
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4">
-                        <div class="shirt">
-                            <img src="assets/Quero_Cafe_fundo_Preto.png" class="img-fluid" alt="Camiseta Quero_Cafe_fundo_Preto">
-                            <button class="btn btn-primary mt-10">
-                                COMPRAR
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
     </main>
     <!--  Rodapé  -->
@@ -188,6 +196,8 @@
             <a href="index.html">TI Shirts</a>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
