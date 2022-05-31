@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="plugins/bootstrap.min.css">
     <link rel="stylesheet" href="plugins/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>TI Shirts</title>
+    <title>Login | TI Shirts</title>
 </head>
 
 <body ng-app="app">
@@ -42,44 +43,51 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div>
-            <h2>Carrinho de compras</h2>
-            <hr>
-        </div>
-        <div id="carrinho">
-            <div class="col-12 col-md-4" id="foto2">
-                <a href="#" id="camiseta2">
-                    <div class="row">
-                        <div class="col-12 product-img">
-                            <img src="./assets/camisa_definição_programador.png" class="img-fluid"
-                                alt="Camiseta definição de programador">
-                        </div>
-                        <div class="col-12 mt-10 product-desc">
-                            <p>CAMISETA DEFINIÇÃO DE PROGRAMADOR</p>
-                            <p><strong>VALOR: R$49,99</strong></p>
-                        </div>
 
-                    </div>
-                </a>
+    <main>
+        <section>
+            <div class="row">
+                <div class="col-12" style="display: flex; justify-content: center; align-items: center">
+                    <h1>Logar</h1>
+                </div>
             </div>
-        </div>
-            
+            <div class="row">
+                <div class="col-12" style="display: flex; justify-content: center; align-items: center">
+                    <div class="card p10" style="max-width: 30rem">
+                        <form ng-controller="LoginController">
+                            <div class="row">
+                                <div class=" col-12">
+                                    <div class="row">
+                                        <div class="col-12 mt-10">
+                                            <div class="form-group">
+                                                <label for="email">E-mail</label>
+                                                <input class="form-control" id="email" type="text" ng-model="data.email" placeholder="exemplo@exemplo.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-10">
+                                            <label for="pass">Senha</label>
+                                            <input type="password" class="form-control" id="pass" ng-model="data.password" placeholder="********">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-10">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button class="btn btn-primary" ng-click="login()">
+                                            <span>Entrar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
-        <hr>
-        <div class="finish">
-            <p class="total">Total R$49,99</p>
-            <button type="submit" class="btn btn-primary">
-                <span>Finalizar compra</span>
-            </button>
-        </div>
-        
-    </section>
+    </main>
 
-
-     <!--  Rodapé  -->
-
-     <footer>
+    <footer>
         <hr>
         <div>
             <section>
@@ -139,8 +147,10 @@
         </div>
     </footer>
 
-    <script src="./plugins/angular.min.js" ></script>
-    <script src="./js/carrinho/carrinho.js" ></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/angular.min.js"></script>
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <script src="js/login/script.js"></script>
 </body>
 
 </html>

@@ -66,6 +66,10 @@ li {
     color: transparent;
 }
 
+.hide {
+    display: none !important;
+}
+
 button {
     width: 180px;
     text-decoration: none;
@@ -164,7 +168,7 @@ nav {
 }
 
 @media only screen and (max-width: 575px) {
-    .hide {
+    .hide-sm {
         display: none;
     }
     .destaques {
@@ -264,11 +268,11 @@ main {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
 }
 
 .form-wrapper fieldset {
-    width: fit-content;
+    width: 100%;
     border: none;
 }
 
@@ -283,12 +287,12 @@ form button {
     border-radius: 1rem;
 }
 
-form {
-    font-size: clamp(0.3rem, 1rem, 1rem);
-}
-
 .card {
     background-color: var(--clr-medium);
+}
+.card-inside {
+    border: rgba(0, 0, 0, 0.5) 2px solid;
+    border-radius: 10px;
 }
 
 /**********************************/
@@ -315,4 +319,10 @@ form {
     max-height: 200px;
     object-fit: cover;
     object-position: 0 10px;
+}
+/**********************************/
+/* 10. Carrihno
+/**********************************/
+.finish{
+	text-align: right;
 }
