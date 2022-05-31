@@ -11,7 +11,7 @@
     <title>TI Shirts</title>
 </head>
 
-<body>
+<body ng-app="app">
     <header>
 
         <!--  Menu  -->
@@ -42,9 +42,11 @@
             </div>
         </nav>
     </header>
-    <section>
-        <p>Seu carrinho está vazio!</p>
-    </section>
+    <main>
+        <section>
+            <p>Seu carrinho está vazio!</p>
+        </section>
+    </main>
 
 
      <!--  Rodapé  -->
@@ -108,6 +110,9 @@
             <a href="index.html">TI Shirts</a>
         </div>
     </footer>
+
+    <script src="./plugins/angular.min.js" ></script>
+    <script src="./js/carrinho/carrinho.js" ></script>
 </body>
 
 </html>
