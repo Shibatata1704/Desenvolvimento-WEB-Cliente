@@ -31,6 +31,7 @@
     --clr-pink: #BB86FC;
     --clr-white: #F8F8F8;
     --clr-medium: #999999;
+    --clr-danger: #dc3545;
 }
 
 /**********************************/
@@ -40,6 +41,18 @@ html {
     scroll-behavior: smooth;
     max-width: 1200px;
     margin: auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 body {
@@ -299,6 +312,22 @@ form button {
 /* 9. Helpers
 /**********************************/
 
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.no-padding{
+    padding: 0;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.no-padding{
+    padding: 0;
+}
 .p10 {
     padding: 10px;
 }
@@ -326,3 +355,22 @@ form button {
 .finish{
 	text-align: right;
 }
+
+.product-desc input[type=number] {
+    -moz-appearance: textfield;
+    direction: rtl;
+    width: auto;
+  }
+  .bold {
+      font-weight: bold;
+  }
+  .bolder{
+      font-weight: bolder;
+  }
+  .thrash{
+      display: flex;
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--clr-danger);
+      justify-content: center;
+  }
