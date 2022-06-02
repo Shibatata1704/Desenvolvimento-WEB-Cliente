@@ -11,11 +11,11 @@
     <title>Produtos | TI Shirts</title>
 </head>
 
-<body>
+<body ng-app="app">
     <header>
-
+        
         <!--  Menu  -->
-
+        
         <nav>
             <a href="index.html"><img src="assets/Logo TI-Shirts.png" alt="" srcset=""></a>
             <div>
@@ -42,194 +42,44 @@
             </div>
         </nav>
     </header>
-
-    <main>
+    
+    <main ng-controller="product_controller">
         <section id="produtos">
             <div class="row">
-                <div class="col-12 col-md-4" id="foto1">
-                    <a href=carrinho.html id="camiseta1">
+                <div class="col-md-2">
+                    <select name="sorts" id="sorts" ng-model="sortType" ng-change="sort()">
+                        <option value="alfabetic">Alfabetico</option>
+                        <option value="price">Preço</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-success" ng-model="order" ng-click="changeOrder()">
+                        {{ order }}
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div ng-repeat="product in products" class="col-12 col-md-4" id="foto1">
+                    <a href=# id="camiseta1">
                         <div class="row">
                             <div class="col-12 product-img">
-                                <img src="./assets/camisa_debug_programar.png" class="img-fluid"
-                                    alt="Camiseta Debug e Programação">
+                                <img src="{{ product.image }}" class="img-fluid"
+                                alt="Camiseta Debug e Programação">
                             </div>
                             <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA DEBUGAR PROGRAMAR</p>
-                                <p><strong>VALOR: R$149,99</strong></p>
+                                <p>{{ product.name }}</p>
+                                <p><strong>VALOR: R${{product.price}}</strong></p>
                             </div>
-
                         </div>
                     </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto2">
-                    <a href="carrinho.html" id="camiseta2">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camisa_definição_programador.png" class="img-fluid"
-                                    alt="Camiseta definição de programador">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA DEFINIÇÃO DE PROGRAMADOR</p>
-                                <p><strong>VALOR: R$49,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto3">
-                    <a href="carrinho.html" id="camiseta3">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camisa_eu_sei_css_html.png" class="img-fluid"
-                                    alt="Camiseta eu sei HTML e CSS">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <a>CAMISETA EU CONEÇO HTML E CSS</a>
-                                <p><strong>VALOR: R$99,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto4">
-                    <a href="carrinho.html" id="camiseta4">
-                        <div class="row">
-                            <div class="col-12 mt-10 product-img">
-                                <img src="./assets/camisa_github.png" class="img-fluid" alt="Camiseta GitHub">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA GITHUB</p>
-                                <p><strong>VALOR: R$199,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto5">
-                    <a href="carrinho.html" id="camiseta5">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camiseta_css.png" class="img-fluid" alt="Camiseta CSS">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA CSS</p>
-                                <p><strong>VALOR: R$ 99,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto6">
-                    <a href="carrinho.html" id="camiseta6">
-                        <div class="row">
-                            <div class="col-12 mt-10 product-img">
-                                <img src="./assets/camiseta_sem_internet.png" class="img-fluid"
-                                    alt="Camiseta Sem Internet">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA SEM INTERNET</p>
-                                <p><strong>VALOR: R$69,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto7">
-                    <a href="carrinho.html">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camiseta_gambiarras.png" class="img-fluid"
-                                    alt="Camiseta eu não faço Gambiarras">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA EU NÃO FACO GAMBIARRAS</p>
-                                <p><strong>VALOR: R$ 179,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto8">
-                    <a href="carrinho.html" id="camiseta8">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camiseta_lifestyle_programador.png" class="img-fluid"
-                                    alt="Camiseta Lifestyle Programador">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA LIFESTYLE DE PROGRAMADOR</p>
-                                <p><strong>VALOR: R$ 149,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto9">
-                    <a href="carrinho.html" id="camiseta9">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camiseta_linguagens_programação.png" class="img-fluid"
-                                    alt="Camiseta de linguages de Programação">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA LINGUAGEM DE PROGRAMAÇÃO</p>
-                                <p><strong>VALOR: R$ 119,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto10">
-                    <a href="carrinho.html" id="camiseta10">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camiseta_meu_poder_codar.png" class="img-fluid"
-                                    alt="Camiseta meu poder é codar">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA MEU PODER É CODAR</p>
-                                <p><strong>VALOR: R$ 109,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto11">
-                    <a href="carrinho.html" id="camiseta11">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camiseta_eu_amo_odeio_programação.png" class="img-fluid"
-                                    alt="Camiseta eu amo odeio programar">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA EU AMO/ODEIO PROGRAMAÇÃO</p>
-                                <p><strong>VALOR: R$79,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4" id="foto12">
-                    <a href="carrinho.html" id="camista12">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="./assets/camiseta_sou_garoto_de_programa.png" class="img-fluid"
-                                    alt="Camiseta Sou Garoto De Programa">
-                            </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>CAMISETA SOU GAROTO DE PROGRAMA</p>
-                                <p><strong>VALOR: R$199,99</strong></p>
-                            </div>
-
-                        </div>
-                    </a>
+                 <button ng-click="buy(product)" class="btn btn-success w-100">Comprar</button>   
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
-
+        
         <div>
             <section>
                 <a class="social" href="#">
@@ -279,14 +129,19 @@
                             </li>
                         </ul>
                     </div>
-            </section>
-        </div>
+                </section>
+            </div>
+            
+            <div>
+                © 2022 Copyright:
+                <a href="index.html">TI Shirts</a>
+            </div>
+        </footer>
 
-        <div>
-            © 2022 Copyright:
-            <a href="index.html">TI Shirts</a>
-        </div>
-    </footer>
-</body>
 
+
+        <script src="./plugins/angular.min.js" ></script>
+        <script src="./js/produto/produto.js" ></script>
+    </body>
+    
 </html>
