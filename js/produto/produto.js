@@ -1,5 +1,6 @@
 var app = angular.module('app', [])
 
+
 app.controller('product_controller', ['$scope', ($scope) => {
     $scope.sortType = 'price'
     $scope.order = 'ASC'
@@ -175,6 +176,8 @@ app.controller('product_controller', ['$scope', ($scope) => {
             localStorage.setItem('cart', JSON.stringify(cart))
         }
     }
-    $scope.sort()
+
+    
+    $scope.sort();
 
 }])

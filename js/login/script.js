@@ -35,7 +35,7 @@ app.controller('LoginController', ['$scope', ($scope) => {
                 }
 
             } else {
-                toastr.warning('Nenhum usuário cadasrtrado.');
+                toastr.warning('Nenhum usuário cadastrado.');
             }
         } catch (error) {
             console.error(error);

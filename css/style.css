@@ -350,7 +350,7 @@ form button {
     object-position: 0 10px;
 }
 /**********************************/
-/* 10. Carrihno
+/* 10. Carrinho
 /**********************************/
 .finish{
 	text-align: right;
@@ -373,4 +373,37 @@ form button {
       font-size: 1.5rem;
       color: var(--clr-danger);
       justify-content: center;
+  }
+
+
+/**********************************/
+/* 11. Modal produto
+/**********************************/
+  .modal-produto {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modal-produto:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal-produto > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #fff;
   }

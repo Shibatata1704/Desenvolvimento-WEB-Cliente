@@ -1,5 +1,6 @@
 var app = angular.module('app', [])
 
+
 app.controller('cart_controller', ['$scope', ($scope) => {
     let percentage = 1
     getCart();
@@ -65,7 +66,18 @@ app.controller('cart_controller', ['$scope', ($scope) => {
         updatePrice()
     }
 
+    $scope.finishBuy = () =>{
+        user_logged = localStorage.getItem('web-client@user-logged')
+        user_logged = JSON.parse(user_logged)
+        console.log(user_logged)
+        if(user_logged){
+            return toastr.success('Compra finalizada com sucesso!')
+        }else{
+            window.location.href = 'login.html'
+        }
+    }
 
+    //function evento(evento)
     updatePrice()
 
 
