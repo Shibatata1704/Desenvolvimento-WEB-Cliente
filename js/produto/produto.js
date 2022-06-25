@@ -17,7 +17,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 1,
             name: "CAMISETA DEFINIÇÃO DE PROGRAMADOR",
             price: 49.99,
-            image: "./assets/camisa_definição_programador.png",
+            image: "./assets/camisa_definicao_programador.png",
             quantity: 0
 
         },
@@ -81,7 +81,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 9,
             name: "CAMISETA EU AMO/ODEIO PROGRAMAÇÃO",
             price: 109.99,
-            image: "./assets/camiseta_eu_amo_odeio_programação.png",
+            image: "./assets/camiseta_eu_amo_odeio_programacao.png",
             quantity: 0
 
         },
@@ -89,7 +89,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 10,
             name: "CAMISETA LINGUAGEM DE PROGRAMAÇÃO",
             price: 119.99,
-            image: "./assets/camiseta_linguagens_programação.png",
+            image: "./assets/camiseta_linguagens_programacao.png",
             quantity: 0
 
         },
