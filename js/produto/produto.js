@@ -2,6 +2,7 @@ var app = angular.module('app', [])
 
 
 app.controller('product_controller', ['$scope', ($scope) => {
+    $scope.modal_product = null
     $scope.sortType = 'price'
     $scope.order = 'ASC'
     $scope.products = [
@@ -175,6 +176,14 @@ app.controller('product_controller', ['$scope', ($scope) => {
             cart[index].quantity++
             localStorage.setItem('cart', JSON.stringify(cart))
         }
+    }
+
+    $scope.openModal = (product) =>{
+        $scope.modal_product = product
+    }
+    
+    $scope.closeModal = () =>{
+        $scope.modal_product = null
     }
 
     
