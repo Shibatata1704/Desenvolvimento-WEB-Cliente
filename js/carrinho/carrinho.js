@@ -1,6 +1,5 @@
 var app = angular.module('app', [])
 
-
 app.controller('cart_controller', ['$scope', ($scope) => {
     let percentage = 1
     getCart();
