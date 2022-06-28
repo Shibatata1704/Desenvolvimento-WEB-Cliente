@@ -38,6 +38,9 @@
                             Carrinho
                         </a>
                     </li>
+                    <li id="login">
+                        <a href="login.html">Entrar</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -60,22 +63,33 @@
             </div>
             <div class="row">
                 <div ng-repeat="product in products" class="col-12 col-md-4" id="foto1">
-                    <a href=# id="camiseta1">
-                        <div class="row">
-                            <div class="col-12 product-img">
-                                <img src="{{ product.image }}" class="img-fluid"
-                                alt="Camiseta Debug e Programação">
+                    <div ng-click="openModal(product)">
+                        <a href=# id="camiseta1">
+                            <div class="row">
+                                <div class="col-12 product-img">
+                                    <img src="{{ product.image }}" loading="lazy" class="img-fluid"
+                                    alt="Camiseta Debug e Programação">
+                                </div>
+                                <div class="col-12 mt-10 product-desc">
+                                    <p>{{ product.name }}</p>
+                                    <p><strong>VALOR: R${{product.price}}</strong></p>
+                                </div>
                             </div>
-                            <div class="col-12 mt-10 product-desc">
-                                <p>{{ product.name }}</p>
-                                <p><strong>VALOR: R${{product.price}}</strong></p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                  <button ng-click="buy(product)" class="btn btn-success w-100">Comprar</button>   
                 </div>
             </div>
+            <div ng-if = "modal_product" class="modal-produto">
+                <div>
+                    <a ng-click="closeModal()" class="fechar">x</a>
+                        <h2 class="product-title">{{ modal_product.name }}</h2>
+                        <p>VALOR: R${{modal_product.price}}</p>
+                </div>
+            </div>
         </section>
+
+        
     </main>
     
     <footer>

@@ -1,6 +1,8 @@
 var app = angular.module('app', [])
 
+
 app.controller('product_controller', ['$scope', ($scope) => {
+    $scope.modal_product = null
     $scope.sortType = 'price'
     $scope.order = 'ASC'
     $scope.products = [
@@ -8,14 +10,14 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 0,
             name: "CAMISETA DEBUGAR PROGRAMAR",
             price: 149.99,
-            image: "./assets/camisa_debug_programar.png",
+            image: "./assets/camisa_debug_programar.webp",
             quantity: 0
         },
         {
             id: 1,
             name: "CAMISETA DEFINIÇÃO DE PROGRAMADOR",
             price: 49.99,
-            image: "./assets/camisa_definição_programador.png",
+            image: "./assets/camisa_definicao_programador.webp",
             quantity: 0
 
         },
@@ -23,7 +25,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 2,
             name: "CAMISETA EU CONHEÇO HTML E CSS",
             price: 99.99,
-            image: "./assets/camisa_eu_sei_css_html.png",
+            image: "./assets/camisa_eu_sei_css_html.webp",
             quantity: 0
 
         },
@@ -31,7 +33,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 3,
             name: "CAMISETA GITHUB",
             price: 199.99,
-            image: "./assets/camisa_github.png",
+            image: "./assets/camisa_github.webp",
             quantity: 0
 
         },
@@ -39,7 +41,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 4,
             name: "CAMISETA CSS",
             price: 99.99,
-            image: "./assets/camiseta_css.png",
+            image: "./assets/camiseta_css.webp",
             quantity: 0
 
         },
@@ -47,7 +49,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 5,
             name: "CAMISETA SEM INTERNET",
             price: 69.99,
-            image: "./assets/camiseta_sem_internet.png",
+            image: "./assets/camiseta_sem_internet.webp",
             quantity: 0
 
         },
@@ -55,7 +57,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 6,
             name: "CAMISETA EU NÃO FACO GAMBIARRAS",
             price: 149.99,
-            image: "./assets/camiseta_gambiarras.png",
+            image: "./assets/camiseta_gambiarras.webp",
             quantity: 0
 
         },
@@ -63,7 +65,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 7,
             name: "CAMISETA LIFESTYLE DE PROGRAMADOR",
             price: 149.99,
-            image: "./assets/camiseta_lifestyle_programador.png",
+            image: "./assets/camiseta_lifestyle_programador.webp",
             quantity: 0
 
         },
@@ -71,7 +73,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 8,
             name: "CAMISETA MEU PODER É CODAR",
             price: 79.99,
-            image: "./assets/camiseta_meu_poder_codar.png",
+            image: "./assets/camiseta_meu_poder_codar.webp",
             quantity: 0
 
         },
@@ -79,7 +81,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 9,
             name: "CAMISETA EU AMO/ODEIO PROGRAMAÇÃO",
             price: 109.99,
-            image: "./assets/camiseta_eu_amo_odeio_programação.png",
+            image: "./assets/camiseta_eu_amo_odeio_programacao.webp",
             quantity: 0
 
         },
@@ -87,7 +89,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 10,
             name: "CAMISETA LINGUAGEM DE PROGRAMAÇÃO",
             price: 119.99,
-            image: "./assets/camiseta_linguagens_programação.png",
+            image: "./assets/camiseta_linguagens_programacao.webp",
             quantity: 0
 
         },
@@ -95,7 +97,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             id: 11,
             name: "CAMISETA SOU GAROTO DE PROGRAMA",
             price: 199.99,
-            image: "./assets/camiseta_sou_garoto_de_programa.png",
+            image: "./assets/camiseta_sou_garoto_de_programa.webp",
             quantity: 0
         },
     ]
@@ -175,6 +177,16 @@ app.controller('product_controller', ['$scope', ($scope) => {
             localStorage.setItem('cart', JSON.stringify(cart))
         }
     }
-    $scope.sort()
+
+    $scope.openModal = (product) =>{
+        $scope.modal_product = product
+    }
+    
+    $scope.closeModal = () =>{
+        $scope.modal_product = null
+    }
+
+    
+    $scope.sort();
 
 }])
