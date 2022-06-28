@@ -159,7 +159,7 @@ app.controller('product_controller', ['$scope', ($scope) => {
             setQuantity(cart, product);
             return
         }
-        console.log(cart)
+        toastr.success('Produto adquirido com sucesso')
         setQuantity(cart, product);
     }
 
